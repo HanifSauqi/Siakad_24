@@ -23,7 +23,7 @@
           <router-link :to="{ name: 'DataDosen' }">
             <a
               href="#"
-              class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-blue-900 dark:hover:bg-gray-700 group"
+              class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-yellow-300 hover:text-blue-950 group"
             >
               <div class="flex items-center">
                 <img src="../assets/Lecturer.svg" class="mr-3 h-8" alt="" />
@@ -32,7 +32,7 @@
                 >
               </div>
               <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
+                class="w-6 h-6"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,7 +55,7 @@
           <router-link :to="{ name: 'DataMahasiswa' }">
             <a
               href="#"
-              class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-blue-900 dark:hover:bg-gray-700 group"
+              class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-yellow-300 hover:text-blue-950 group group"
             >
               <div class="flex items-center">
                 <img
@@ -89,8 +89,8 @@
         </li>
         <li>
           <router-link
-            :to="{ name: '' }"
-            class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-blue-900 dark:hover:bg-gray-700 group"
+            :to="{ name: 'DataMataKuliah' }"
+            class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-yellow-300 hover:text-blue-950 group group"
           >
             <div class="flex items-center">
               <img src="../assets/Book.svg" class="mr-3 h-8" alt="" />
@@ -119,7 +119,7 @@
         </li>
 
         <li>
-    <a
+          <a
       href="#"
       class="flex items-center justify-between p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-blue-900 dark:hover:bg-gray-700 group"
       @click="logout"
@@ -129,7 +129,7 @@
         <span class="mx-3 text-lg font-semibold">Logout</span>
       </div>
     </a>
-  </li>
+        </li>
       </ul>
     </div>
   </aside>

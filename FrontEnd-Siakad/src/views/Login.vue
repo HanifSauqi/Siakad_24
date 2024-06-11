@@ -41,12 +41,12 @@
               required
             />
           </div>
-            <button
-              type="submit"
-              class="bg-blue-950 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-            >
-              Login
-            </button>
+          <button
+            type="submit"
+            class="bg-blue-950 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+          >
+            Login
+          </button>
         </form>
       </div>
     </div>
@@ -65,6 +65,7 @@ const router = useRouter();
 onMounted(() => {
   const token = localStorage.getItem("token");
   const role = localStorage.getItem("role");
+  const id = localStorage.getItem("id");
 
   if (token && role === "admin") {
     router.push({ name: "Dashboard" }); // replace 'Dashboard' with the name of your dashboard route
@@ -83,8 +84,13 @@ const login = async () => {
     if (response.data.success) {
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("role", response.data.role);
+      localStorage.setItem("userId", response.data.id); // change this line
 
       console.log("Login successful. Token saved to local storage.");
+      console.log(
+        "userId stored in localStorage:",
+        localStorage.getItem("userId")
+      ); // this line will print the userId from localStorage to the console
 
       // Check user role and redirect to the appropriate page
       if (response.data.role === "admin") {

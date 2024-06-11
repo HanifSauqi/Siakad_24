@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\DataMatkul;
+use App\Http\Resources\DataMatkulResource;
 use Illuminate\Http\Request;
 
 class DataMatkulController extends Controller
 {
     public function index()
     {
-        $dataMatkul = DataMatkul::all();
-        return response()->json($dataMatkul);
+        $dataMatkul = DataMatkul::with('dosen')->get();
+        return DataMatkulResource::collection($dataMatkul);
     }
 
     public function store(Request $request)

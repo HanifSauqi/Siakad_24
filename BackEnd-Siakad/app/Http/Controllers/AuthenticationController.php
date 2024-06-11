@@ -37,6 +37,7 @@ class AuthenticationController extends Controller
             'success' => true,
             'token' => $token,
             'role' => $user->role, // Asumsi bahwa Anda memiliki kolom 'role' di tabel 'users'
+            'id' => $user->id, // tambahkan baris ini
         ]);
     }
     
